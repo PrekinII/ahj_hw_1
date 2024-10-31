@@ -1,5 +1,1 @@
-# Webpack5
-
-[Руководство по настройке Webpack](https://webpack.js.org/guides/)
-[Руководство по настройке GitHub Actions](https://docs.github.com/en/actions/quickstart)
-![CI](https://github.com/PrekinII/ahj_hw_1/actions/workflows/web.yml/badge.svg)
+[![Build status](https://ci.appveyor.com/api/projects/status/oih9dbgvemga2e5u?svg=true)](https://ci.appveyor.com/project/PrekinII/ahj-hw-1)
