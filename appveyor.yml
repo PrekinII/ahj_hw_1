@@ -1,9 +1,31 @@
 image: Windows
-stack: node 12 # окружение
+
+environment:
+  nodejs_version: "12"
+
+platform:
+  - x64
+
+init:
+  - git config --global core.autocrlf true
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - node --version
+  - npm --version
+  - npm install
+
+build_script:
+  - npm run build  # или другая команда сборки
+
+test_script:
+  - npm test  # если есть тесты
+
+cache:
+  - node_modules -> package-lock.json
+
 branches:
   only:
-    - main  #ветка git
-cache: node_modules  #кеширование
-install:
-- npm install  #команда установки зависимостей
-build: on
+    - main
+
+build: off  # отключаем встроенную сборку MSBuild
